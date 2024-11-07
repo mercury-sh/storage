@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{70E895EF-989E-4B17-9BAE-32E82FBE9C60}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{10476E55-0552-4D0B-BCF3-AAD49A0A1B5B}"
+	ProjectSection(SolutionItems) = preProject
+		Mercury.PowerShell.Configuration.props = Mercury.PowerShell.Configuration.props
+		Mercury.PowerShell.Targets.props = Mercury.PowerShell.Targets.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{87BFD4C5-F65C-493D-998D-F64BEB8247CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{0404CD0B-6A31-49C1-9A35-B836FC8A2C31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{10476E55-0552-4D0B-BCF3-AAD49A0A1B5B} = {70E895EF-989E-4B17-9BAE-32E82FBE9C60}
+	EndGlobalSection
+EndGlobal
