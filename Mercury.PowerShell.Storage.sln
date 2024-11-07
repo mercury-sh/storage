@@ -21,6 +21,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{87BFD4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{0404CD0B-6A31-49C1-9A35-B836FC8A2C31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercury.PowerShell.Storage", "source\Mercury.PowerShell.Storage\Mercury.PowerShell.Storage.csproj", "{7E9DEBA0-D7A4-4E68-92A9-E8E793FB4507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercury.PowerShell.Storage.Testing", "testing\Mercury.PowerShell.Storage.Testing\Mercury.PowerShell.Storage.Testing.csproj", "{F9F7DFCE-3F76-45D8-B5B4-FD5BBD17CDB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +35,17 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{10476E55-0552-4D0B-BCF3-AAD49A0A1B5B} = {70E895EF-989E-4B17-9BAE-32E82FBE9C60}
+		{7E9DEBA0-D7A4-4E68-92A9-E8E793FB4507} = {87BFD4C5-F65C-493D-998D-F64BEB8247CA}
+		{F9F7DFCE-3F76-45D8-B5B4-FD5BBD17CDB4} = {0404CD0B-6A31-49C1-9A35-B836FC8A2C31}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E9DEBA0-D7A4-4E68-92A9-E8E793FB4507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9DEBA0-D7A4-4E68-92A9-E8E793FB4507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9DEBA0-D7A4-4E68-92A9-E8E793FB4507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9DEBA0-D7A4-4E68-92A9-E8E793FB4507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9F7DFCE-3F76-45D8-B5B4-FD5BBD17CDB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F7DFCE-3F76-45D8-B5B4-FD5BBD17CDB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F7DFCE-3F76-45D8-B5B4-FD5BBD17CDB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F7DFCE-3F76-45D8-B5B4-FD5BBD17CDB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

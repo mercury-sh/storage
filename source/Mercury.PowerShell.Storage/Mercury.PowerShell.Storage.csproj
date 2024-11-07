@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="../../Mercury.PowerShell.Targets.props"/>
+  <Import Project="../../Mercury.PowerShell.Configuration.props"/>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package">
+    <Authors>Bruno Sales</Authors>
+    <Description>Storage utilities for Mercury.PowerShell.</Description>
+    <Copyright>Copyright (c) 2024 Bruno Sales &lt;me@baliestri.dev&gt;</Copyright>
+    <Company>baliestri</Company>
+    <PackageId>Mercury.PowerShell.Storage</PackageId>
+    <PackageProjectUrl>https://github.com/mercury-sh/storage</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/mercury-sh/storage.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>powershell;storage;mercury;sqlite</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="$(AssemblyName).Testing"/>
+  </ItemGroup>
+
+</Project>
