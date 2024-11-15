@@ -25,7 +25,7 @@ public interface IReadOnlyRepository<TEntity> : IDisposable where TEntity : Base
   /// </summary>
   /// <param name="id">The identifier of the entity to find.</param>
   /// <returns><c>true</c> if the entity exists, <c>false</c> otherwise.</returns>
-  bool Exists(Ulid id);
+  bool Exists(Guid id);
 
   /// <summary>
   ///   Checks if an entity exists in the repository by a predicate.
@@ -40,7 +40,7 @@ public interface IReadOnlyRepository<TEntity> : IDisposable where TEntity : Base
   /// </summary>
   /// <param name="id">The identifier of the entity to find.</param>
   /// <returns>The entity if found, null otherwise.</returns>
-  TEntity? Get(Ulid id);
+  TEntity? Get(Guid id);
 
   /// <summary>
   ///   Gets an entity in the repository by a predicate.

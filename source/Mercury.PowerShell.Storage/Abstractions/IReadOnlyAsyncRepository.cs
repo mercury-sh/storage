@@ -33,7 +33,7 @@ public interface IReadOnlyAsyncRepository<TEntity> : IAsyncDisposable where TEnt
   /// <param name="cancellationToken">A <see cref="CancellationToken" /> to observe while waiting for the task to complete.</param>
   /// <returns><c>true</c> if the entity exists, <c>false</c> otherwise.</returns>
   /// <exception cref="ArgumentNullException">If the <paramref name="id" /> is <c>null</c>.</exception>
-  Task<bool> ExistsAsync(Ulid id, CancellationToken cancellationToken = default);
+  Task<bool> ExistsAsync(Guid id, CancellationToken cancellationToken = default);
 
   /// <summary>
   ///   Checks if an entity exists in the repository by a predicate.
@@ -51,7 +51,7 @@ public interface IReadOnlyAsyncRepository<TEntity> : IAsyncDisposable where TEnt
   /// <param name="cancellationToken">A <see cref="CancellationToken" /> to observe while waiting for the task to complete.</param>
   /// <returns>The entity if found, null otherwise.</returns>
   /// <exception cref="ArgumentNullException">If the <paramref name="id" /> is <c>null</c>.</exception>
-  Task<TEntity?> GetAsync(Ulid id, CancellationToken cancellationToken = default);
+  Task<TEntity?> GetAsync(Guid id, CancellationToken cancellationToken = default);
 
   /// <summary>
   ///   Gets an entity in the repository by a predicate.

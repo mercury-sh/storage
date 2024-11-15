@@ -32,7 +32,7 @@ public interface IRepository<TEntity> : IReadOnlyRepository<TEntity> where TEnti
   /// <param name="id">The identifier of the entity to update.</param>
   /// <param name="action">The action to update the entity.</param>
   /// <exception cref="ArgumentNullException">If the <paramref name="id" /> or <paramref name="action" /> is <c>null</c>.</exception>
-  void Update(Ulid id, Action<TEntity> action);
+  void Update(Guid id, Action<TEntity> action);
 
   /// <summary>
   ///   Updates an entity in the repository.
@@ -61,7 +61,7 @@ public interface IRepository<TEntity> : IReadOnlyRepository<TEntity> where TEnti
   /// </summary>
   /// <param name="id">The identifier of the entity to delete.</param>
   /// <exception cref="ArgumentNullException">If the <paramref name="id" /> is <c>null</c>.</exception>
-  void Delete(Ulid id);
+  void Delete(Guid id);
 
   /// <summary>
   ///   Deletes an entity from the repository.
@@ -89,7 +89,7 @@ public interface IRepository<TEntity> : IReadOnlyRepository<TEntity> where TEnti
   /// </summary>
   /// <param name="identifiers">The identifiers of the entities to delete.</param>
   /// <exception cref="ArgumentNullException">If the <paramref name="identifiers" /> is <c>null</c>.</exception>
-  void Delete(IEnumerable<Ulid> identifiers);
+  void Delete(IEnumerable<Guid> identifiers);
 
   /// <summary>
   ///   Deletes all entities from the repository.

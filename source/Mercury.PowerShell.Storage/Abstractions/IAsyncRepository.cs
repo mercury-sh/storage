@@ -38,7 +38,7 @@ public interface IAsyncRepository<TEntity> : IReadOnlyAsyncRepository<TEntity> w
   /// <param name="cancellationToken">A <see cref="CancellationToken" /> to observe while waiting for the task to complete.</param>
   /// <returns>A task representing the asynchronous operation.</returns>
   /// <exception cref="ArgumentNullException">If the <paramref name="id" /> or <paramref name="action" /> is <c>null</c>.</exception>
-  Task UpdateAsync(Ulid id, Action<TEntity> action, CancellationToken cancellationToken = default);
+  Task UpdateAsync(Guid id, Action<TEntity> action, CancellationToken cancellationToken = default);
 
   /// <summary>
   ///   Updates an entity in the repository.
@@ -75,7 +75,7 @@ public interface IAsyncRepository<TEntity> : IReadOnlyAsyncRepository<TEntity> w
   /// <param name="cancellationToken">A <see cref="CancellationToken" /> to observe while waiting for the task to complete.</param>
   /// <returns>A task representing the asynchronous operation.</returns>
   /// <exception cref="ArgumentNullException">If the <paramref name="id" /> is <c>null</c>.</exception>
-  Task DeleteAsync(Ulid id, CancellationToken cancellationToken = default);
+  Task DeleteAsync(Guid id, CancellationToken cancellationToken = default);
 
   /// <summary>
   ///   Deletes an entity from the repository.
@@ -110,7 +110,7 @@ public interface IAsyncRepository<TEntity> : IReadOnlyAsyncRepository<TEntity> w
   /// <param name="cancellationToken">A <see cref="CancellationToken" /> to observe while waiting for the task to complete.</param>
   /// <returns>A task representing the asynchronous operation.</returns>
   /// <exception cref="ArgumentNullException">If the <paramref name="identifiers" /> is <c>null</c>.</exception>
-  Task DeleteAsync(IEnumerable<Ulid> identifiers, CancellationToken cancellationToken = default);
+  Task DeleteAsync(IEnumerable<Guid> identifiers, CancellationToken cancellationToken = default);
 
   /// <summary>
   ///   Deletes all entities from the repository.
