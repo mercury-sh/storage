@@ -5,6 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 using Mercury.PowerShell.Storage.Abstractions;
 using Mercury.PowerShell.Storage.Options;
 using Mercury.PowerShell.Storage.Options.Enums;
+using Mercury.PowerShell.Storage.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Mercury.PowerShell.Storage.Extensions;
@@ -22,6 +23,8 @@ public static class ServiceCollectionExtensions {
   /// <exception cref="ArgumentOutOfRangeException">The SQLite connection API is not supported.</exception>
   /// <returns>The service collection itself.</returns>
   public static IServiceCollection AddStorageDatabase(this IServiceCollection serviceCollection, StorageDatabaseOptions.Configure configure) {
+    SQLitePortableClassLibrary.EnsureLoaded();
+
     var assemblies = AppDomain.CurrentDomain.GetAssemblies();
     var entities = assemblies
       .SelectMany(assembly => assembly.GetTypes())

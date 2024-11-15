@@ -5,6 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 using Mercury.PowerShell.Storage.Abstractions;
 using Mercury.PowerShell.Storage.Exceptions;
 using Mercury.PowerShell.Storage.Options;
+using Mercury.PowerShell.Storage.Reflection;
 
 namespace Mercury.PowerShell.Storage;
 
@@ -21,6 +22,7 @@ public static class ModuleUtility {
   /// <remarks>Should be called when the module is imported.</remarks>
   public static void OnImport(StorageDatabaseOptions.Configure? configure = null, string? customRootDirectory = null) {
     if (configure is not null) {
+      SQLitePortableClassLibrary.EnsureLoaded();
       var registrar = new StorageDatabaseOptionsRegistrar(configure);
       var provider = new ContextProvider(registrar);
 
