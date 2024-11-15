@@ -3,6 +3,7 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
+using Mercury.PowerShell.Storage.Options.Abstractions;
 using Mercury.PowerShell.Storage.Options.DataAnnotations;
 using Mercury.PowerShell.Storage.Options.Enums;
 using SQLite;
@@ -15,6 +16,11 @@ namespace Mercury.PowerShell.Storage.Options;
 /// </summary>
 [SuppressMessage("ReSharper", "InconsistentNaming")]
 public readonly record struct StorageDatabaseOptions {
+  /// <summary>
+  ///   The delegate to configure the options.
+  /// </summary>
+  public delegate void Configure(IOptionsBuilder options);
+
   /// <summary>
   ///   The file name of the database.
   /// </summary>
